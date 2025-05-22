@@ -52,7 +52,7 @@ toChars :: Raw -> String
 toChars =
   Name.toChars
 
-toText = Data.Text.pack . toChars
+
 
 
 toFilePath :: Raw -> FilePath
@@ -140,6 +140,7 @@ data Canonical =
     }
 
 
+toText Canonical { _package = p, _module = m } = Name.toText m
 
 -- INSTANCES
 
