@@ -32,7 +32,7 @@ instance FromJSON SyntaxType where
 
 -- | Represents a syntax element in the code.
 data SyntaxEntry = SyntaxEntry
-  { type :: SyntaxType,
+  { type_ :: SyntaxType,
     name :: Text,
     code :: Text,
     startLine :: Int,

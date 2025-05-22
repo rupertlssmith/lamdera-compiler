@@ -19,6 +19,7 @@ module Elm.ModuleName
   , webgl, texture, vector2, vector3, vector4, matrix4
   -- @LAMDERA
   , bytes, lamderaWire3, seqDict
+  , toText
   )
   where
 
@@ -38,7 +39,7 @@ import qualified Json.Encode as E
 import qualified Parse.Variable as Var
 import qualified Parse.Primitives as P
 import Parse.Primitives (Row, Col)
-
+import qualified Data.Text
 
 
 -- RAW
@@ -50,6 +51,8 @@ type Raw = Name.Name
 toChars :: Raw -> String
 toChars =
   Name.toChars
+
+toText = Data.Text.pack . toChars
 
 
 toFilePath :: Raw -> FilePath

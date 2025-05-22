@@ -147,10 +147,11 @@ Executable lamdera
         Json.Decode
         Json.Encode
         Json.String
+        Json.Syntax
 
         -- from compiler/
         AST.Canonical
-        AST.Dependencies
+        Ast.Dependencies
         AST.Optimized
         AST.Source
         AST.Utils.Binop
@@ -348,16 +349,7 @@ Executable lamdera
         -- ext-elm-pages
         Ext.ElmPages
         Test.Ext.ElmPages.Check
-
-    extra-source-files:
-        test/syntax-json-samples/input/Basic.elm
-        test/syntax-json-samples/input/WithImports.elm
-        test/syntax-json-samples/input/Complex.elm
-        test/syntax-json-samples/input/elm.json
-        test/syntax-json-samples/expected/Basic.json
-        test/syntax-json-samples/expected/WithImports.json
-        test/syntax-json-samples/expected/Complex.json
-
+    
     Build-depends:
         ansi-terminal,
         ansi-wl-pprint < 1,
