@@ -320,7 +320,7 @@ Executable lamdera
         Test.Lamdera.Evergreen.TestMigrationGenerator
         Test.Lamdera.Evergreen.TestMigrationHarness
         Test.Snapshot
-        Test.SyntaxJson -- NEW TEST MODULE
+        Test.SyntaxJson
         Test.TypeHashes
         Test.WebGL
         Test.Wire
