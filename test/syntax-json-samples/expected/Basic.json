@@ -1,0 +1,56 @@
+[
+  {
+    "type": "typedef",
+    "name": "Msg",
+    "code": "type Msg =\n    Increment\n    | Decrement",
+    "startLine": 7,
+    "endLine": 9,
+    "calls": [],
+    "imports": ["Html exposing (Html, text)", "Html.Attributes as Attr"]
+  },
+  {
+    "type": "typealias",
+    "name": "Model",
+    "code": "type alias Model =\n    { count : Int }",
+    "startLine": 11,
+    "endLine": 12,
+    "calls": [],
+    "imports": ["Html exposing (Html, text)", "Html.Attributes as Attr"]
+  },
+  {
+    "type": "constant",
+    "name": "init",
+    "code": "init =\n    { count = 0 }",
+    "startLine": 14,
+    "endLine": 16,
+    "calls": [],
+    "imports": ["Html exposing (Html, text)", "Html.Attributes as Attr"]
+  },
+  {
+    "type": "function",
+    "name": "update",
+    "code": "update msg model =\n    case msg of\n        Increment ->\n            { model | count = model.count + 1 }\n\n        Decrement ->\n            { model | count = model.count - 1 }",
+    "startLine": 18,
+    "endLine": 25,
+    "calls": [],
+    "imports": ["Html exposing (Html, text)", "Html.Attributes as Attr"]
+  },
+  {
+    "type": "function",
+    "name": "view",
+    "code": "view model =\n    Html.div []\n        [ Html.button [ Attr.class \"decrement\", onClick Decrement ] [ text \"-\" ]\n        , Html.div [] [ text (String.fromInt model.count) ]\n        , Html.button [ Attr.class \"increment\", onClick Increment ] [ text \"+\" ]\n        ]",
+    "startLine": 27,
+    "endLine": 33,
+    "calls": ["Html.div", "Html.button", "Attr.class", "onClick", "Decrement", "text", "String.fromInt", "Increment"],
+    "imports": ["Html exposing (Html, text)", "Html.Attributes as Attr"]
+  },
+  {
+    "type": "constant",
+    "name": "main",
+    "code": "main =\n    Html.beginnerProgram\n        { model = init\n        , view = view\n        , update = update\n        }",
+    "startLine": 35,
+    "endLine": 40,
+    "calls": ["Html.beginnerProgram", "init", "view", "update"],
+    "imports": ["Html exposing (Html, text)", "Html.Attributes as Attr"]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "type": "function",
+    "name": "aliasedFunction",
+    "code": "aliasedFunction maybeVal =\n    M.withDefault 0 maybeVal",
+    "startLine": 8,
+    "endLine": 9,
+    "calls": ["M.withDefault"],
+    "imports": ["Dict", "List", "Maybe as M", "Set exposing (Set)"]
+  },
+  {
+    "type": "function",
+    "name": "listProcessing",
+    "code": "listProcessing nums =\n    List.map String.fromInt nums",
+    "startLine": 11,
+    "endLine": 12,
+    "calls": ["List.map", "String.fromInt"],
+    "imports": ["Dict", "List", "Maybe as M", "Set exposing (Set)"]
+  },
+  {
+    "type": "function",
+    "name": "setCount",
+    "code": "setCount s =\n    Set.size s",
+    "startLine": 14,
+    "endLine": 15,
+    "calls": ["Set.size"],
+    "imports": ["Dict", "List", "Maybe as M", "Set exposing (Set)"]
+  },
+  {
+    "type": "function",
+    "name": "dictLookup",
+    "code": "dictLookup d k =\n    Dict.get k d",
+    "startLine": 17,
+    "endLine": 18,
+    "calls": ["Dict.get"],
+    "imports": ["Dict", "List", "Maybe as M", "Set exposing (Set)"]
+  }
+]

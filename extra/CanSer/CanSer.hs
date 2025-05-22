@@ -143,11 +143,11 @@ instance ToElm C.Expr_ where
         in
           p (intercalate "" (f <$> thisThenExprs) <> toElm expr)
       C.Let def expr ->
-        "let" <> Indent <> toElm def <> Dedent <> "in\n" <> Indent <> toElm expr <> Dedent
+        "let" <> Indent <> toElm def <> Dedent <> "\nin\n" <> Indent <> toElm expr <> Dedent
       C.LetRec defs expr ->
         "let" <> Indent <> (intercalate "\n" (toElm <$> defs)) <> Dedent <> "\nin " <> Indent <> toElm expr <> Dedent
       C.LetDestruct pat expr exprBody ->
-        "let" <> Indent <> toElm pat <> " = " <> Indent <> toElm expr <> Dedent <> Dedent <> "\nin " <> Indent <> toElm exprBody <> Dedent
+        "let" <> Indent <> toElm pat <> " = " <> toElm expr <> Dedent <> "\nin " <> Indent <> toElm exprBody <> Dedent
       C.Case expr caseBranches ->
         let
           f (C.CaseBranch pat expr1) = toElm pat <> " ->" <> Indent <> toElm expr1 <> Dedent
@@ -157,7 +157,7 @@ instance ToElm C.Expr_ where
         "." <> toElm name
       C.Access expr (A.At _ name) ->
         p(p (toElm expr) <.> toElm name)
-      C.Update name _ nameFieldUpdateMap -> -- TODO: what is this `expr` for? When people try to record update expressions, rather than variables?
+      C.Update name _ nameFieldUpdateMap -> -- The _ is a C.Expr, which is the record expression itself. 'name' is the variable name if the record is a var.
         "{ " <> toElm name <> " | " <> intercalate ", "
           ((\(name, value) -> toElm name <> " = " <> toElm value) <$> Map.toList (tFieldUpdate <$> nameFieldUpdateMap)) <> " }"
       C.Record nameExprMap ->

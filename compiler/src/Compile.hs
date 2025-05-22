@@ -26,7 +26,16 @@ import qualified Reporting.Render.Type.Localizer as Localizer
 import qualified Type.Constrain.Module as Type
 import qualified Type.Solve as Type
 
--- import System.IO.Unsafe (unsafePerformIO)
+import System.IO.Unsafe (unsafePerformIO) -- Make sure this is imported
+import qualified Data.Aeson as Aeson
+import qualified Generate.SyntaxJson as SyntaxJson
+import qualified Data.ByteString.Lazy as BSL
+import System.FilePath ((<.>))
+import Control.Monad (when) -- NEW IMPORT
+import qualified Lamdera.Flags -- NEW IMPORT
+-- import qualified Elm.ModuleName as ModuleName -- Already imported
+
+-- import System.IO.Unsafe (unsafePerformIO) -- Already imported above if needed
 
 import qualified Lamdera.Wire3.Core
 import qualified Lamdera.Wire3.Interfaces
@@ -69,6 +78,9 @@ compile pkg ifaces modul = do
   -- ()          <- debugPassText "starting canonical" "" (pure ())
   canonical0  <- canonicalize pkg ifaces modul_
   -- ()          <- debugPassText "starting canonical2" moduleName (pure ())
+
+  -- Write Syntax JSON after successful canonicalization (using canonical0)
+  _ <- Right $ unsafePerformIO $ writeSyntaxJsonFileIO modul_ canonical0
 
   canonical2 <-
     -- Add Canonical Wire gens, i.e. the `w3_[en|de]code_TYPENAME` functions
@@ -120,6 +132,18 @@ compile_ pkg ifaces modul =
 
 
 -- PHASES
+
+-- Helper function to write syntax JSON file
+writeSyntaxJsonFileIO :: Src.Module -> Can.Module -> IO ()
+writeSyntaxJsonFileIO srcMod canMod = do
+  syntaxJsonFlagEnabled <- Lamdera.Flags.isSyntaxJsonGenerationEnabled
+  when syntaxJsonFlagEnabled $ do
+    let entries = SyntaxJson.generateSyntaxJson srcMod canMod
+    let jsonByteString = Aeson.encode entries
+    -- Determine output filename: My.Module.json from module name My.Module
+    let moduleNameRaw = A.toValue (Src.getName srcMod)
+    let outputFilename = ModuleName.toChars moduleNameRaw <.> "json"
+    BSL.writeFile outputFilename jsonByteString
 
 
 canonicalize :: Pkg.Name -> Map.Map ModuleName.Raw I.Interface -> Src.Module -> Either E.Error Can.Module

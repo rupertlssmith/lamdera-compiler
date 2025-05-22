@@ -1,0 +1,65 @@
+[
+  {
+    "type": "typealias",
+    "name": "ComplexModel",
+    "code": "type alias ComplexModel =\n    { basic : Basic.Model\n    , name : String\n    }",
+    "startLine": 6,
+    "endLine": 9,
+    "calls": [],
+    "imports": ["Basic exposing (Model, Msg(..))", "WithImports"]
+  },
+  {
+    "type": "typedef",
+    "name": "ComplexMsg",
+    "code": "type ComplexMsg =\n    BasicMsg Basic.Msg\n    | SetName String",
+    "startLine": 11,
+    "endLine": 13,
+    "calls": [],
+    "imports": ["Basic exposing (Model, Msg(..))", "WithImports"]
+  },
+  {
+    "type": "constant",
+    "name": "initialComplexModel",
+    "code": "initialComplexModel =\n    { basic = Basic.init\n    , name = \"complex\"\n    }",
+    "startLine": 15,
+    "endLine": 18,
+    "calls": ["Basic.init"],
+    "imports": ["Basic exposing (Model, Msg(..))", "WithImports"]
+  },
+  {
+    "type": "function",
+    "name": "updateComplex",
+    "code": "updateComplex msg model =\n    case msg of\n        BasicMsg basicMsg ->\n            { model | basic = Basic.update basicMsg model.basic }\n\n        SetName newName ->\n            let\n                trimmedName =\n                    String.trim newName\n            in\n            { model | name = WithImports.aliasedFunction (String.toInt trimmedName) |> String.fromInt }",
+    "startLine": 20,
+    "endLine": 31,
+    "calls": ["Basic.update", "String.trim", "WithImports.aliasedFunction", "String.toInt", "String.fromInt"],
+    "imports": ["Basic exposing (Model, Msg(..))", "WithImports"]
+  },
+  {
+    "type": "constant",
+    "name": "anotherConstant",
+    "code": "anotherConstant =\n    42",
+    "startLine": 33,
+    "endLine": 34,
+    "calls": [],
+    "imports": ["Basic exposing (Model, Msg(..))", "WithImports"]
+  },
+  {
+    "type": "function",
+    "name": "localCall",
+    "code": "localCall x =\n    anotherConstant + x",
+    "startLine": 37,
+    "endLine": 38,
+    "calls": ["anotherConstant"],
+    "imports": ["Basic exposing (Model, Msg(..))", "WithImports"]
+  },
+  {
+    "type": "function",
+    "name": "makeBasicModel",
+    "code": "makeBasicModel c =\n    Basic.Model c",
+    "startLine": 41,
+    "endLine": 42,
+    "calls": ["Basic.Model"],
+    "imports": ["Basic exposing (Model, Msg(..))", "WithImports"]
+  }
+]

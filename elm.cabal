@@ -150,6 +150,7 @@ Executable lamdera
 
         -- from compiler/
         AST.Canonical
+        AST.Dependencies
         AST.Optimized
         AST.Source
         AST.Utils.Binop
@@ -172,6 +173,7 @@ Executable lamdera
         Generate.JavaScript.Functions
         Generate.JavaScript.Name
         Generate.Mode
+        Generate.SyntaxJson
         Nitpick.Debug
         Nitpick.PatternMatches
         Optimize.Case
@@ -226,6 +228,7 @@ Executable lamdera
 
         -- Lamdera --
         Lamdera
+        Lamdera.Flags
 
         Lamdera.CLI
         Lamdera.CLI.Live
@@ -312,14 +315,15 @@ Executable lamdera
         Test.Caching
         Test.Check
         Test.Helpers
-        Test.Lamdera
-        Test.Snapshot
-        Test.TypeHashes
-        Test.Wire
         Test.JsOutput
-        Test.WebGL
-        Test.Lamdera.Evergreen.TestMigrationHarness
+        Test.Lamdera
         Test.Lamdera.Evergreen.TestMigrationGenerator
+        Test.Lamdera.Evergreen.TestMigrationHarness
+        Test.Snapshot
+        Test.SyntaxJson -- NEW TEST MODULE
+        Test.TypeHashes
+        Test.WebGL
+        Test.Wire
 
 
         -- Debug helpers --
@@ -344,6 +348,15 @@ Executable lamdera
         -- ext-elm-pages
         Ext.ElmPages
         Test.Ext.ElmPages.Check
+
+    extra-source-files:
+        test/syntax-json-samples/input/Basic.elm
+        test/syntax-json-samples/input/WithImports.elm
+        test/syntax-json-samples/input/Complex.elm
+        test/syntax-json-samples/input/elm.json
+        test/syntax-json-samples/expected/Basic.json
+        test/syntax-json-samples/expected/WithImports.json
+        test/syntax-json-samples/expected/Complex.json
 
     Build-depends:
         ansi-terminal,
