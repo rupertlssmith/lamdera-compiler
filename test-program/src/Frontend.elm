@@ -13,6 +13,17 @@ import Url
 type alias Model =
     FrontendModel
 
+main : Program {} Model FrontendMsg
+main =
+    Browser.application
+        { init = \_ -> init
+        , onUrlRequest = UrlClicked
+        , onUrlChange = UrlChanged
+        , update = update
+        , subscriptions = \m -> Sub.none
+        , view = view
+        }
+
 
 app =
     Lamdera.frontend
