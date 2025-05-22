@@ -321,7 +321,6 @@ Executable lamdera
         Test.Lamdera.Evergreen.TestMigrationGenerator
         Test.Lamdera.Evergreen.TestMigrationHarness
         Test.Snapshot
-        Test.SyntaxJson
         Test.TypeHashes
         Test.WebGL
         Test.Wire

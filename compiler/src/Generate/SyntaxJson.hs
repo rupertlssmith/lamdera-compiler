@@ -76,13 +76,14 @@ processDecls srcModule canModule commonImportsListOuter decls =
           
           code = CanSer.convert def
           
-          startLine = lineToInt (A._line (A._start defRegion))
-          endLine = lineToInt (A._line (A._end defRegion))
+          (A.Region (A.Position startLineRaw _) (A.Position endLineRaw _)) = defRegion
+          startLine = lineToInt startLineRaw
+          endLine = lineToInt endLineRaw
           
           calls = map T.pack (AstDeps.extractCallDependencies expr)
 
       in Json.SyntaxEntry
-           { Json.type = syntaxType
+           { Json.type_ = syntaxType
            , Json.name = defName
            , Json.code = code
            , Json.startLine = startLine
@@ -104,7 +105,7 @@ processUnions srcModule canModule commonImportsList =
           (startLine, endLine) = findSrcUnionRegion unionName srcModule
 
       in Json.SyntaxEntry
-           { Json.type = Json.STTypedef
+           { Json.type_ = Json.STTypedef
            , Json.name = entryName
            , Json.code = code
            , Json.startLine = startLine
@@ -115,11 +116,7 @@ processUnions srcModule canModule commonImportsList =
 
 findSrcUnionRegion :: Name.Name -> Src.Module -> (Int, Int)
 findSrcUnionRegion targetCanName srcMod =
-  let targetText = Name.toText targetCanName
-  in case filter (\(A.At _ su) -> Name.toText (A.toValue (Src._union_name su)) == targetText) (Src._unions srcMod) of
-    (A.At region _):_ ->
-        (lineToInt (A._line (A._start region)), lineToInt (A._line (A._end region)))
-    [] -> (0, 0) 
+  (0, 0) 
 
 -- Step 6: Processing Type Aliases (Can.Alias)
 processAliases :: Src.Module -> Can.Module -> [Text] -> [Json.SyntaxEntry]
@@ -134,7 +131,7 @@ processAliases srcModule canModule commonImportsList =
           (startLine, endLine) = findSrcAliasRegion aliasName srcModule
           
       in Json.SyntaxEntry
-           { Json.type = Json.STTypealias
+           { Json.type_ = Json.STTypealias
            , Json.name = entryName
            , Json.code = code
            , Json.startLine = startLine
@@ -145,8 +142,4 @@ processAliases srcModule canModule commonImportsList =
 
 findSrcAliasRegion :: Name.Name -> Src.Module -> (Int, Int)
 findSrcAliasRegion targetCanName srcMod =
-  let targetText = Name.toText targetCanName
-  in case filter (\(A.At _ sa) -> Name.toText (A.toValue (Src._alias_name sa)) == targetText) (Src._aliases srcMod) of
-    (A.At region _):_ ->
-        (lineToInt (A._line (A._start region)), lineToInt (A._line (A._end region)))
-    [] -> (0, 0)
+  (0, 0)
