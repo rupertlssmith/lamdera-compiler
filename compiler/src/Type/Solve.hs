@@ -25,13 +25,14 @@ import qualified Type.Error as ET
 import qualified Type.Unify as Unify
 import qualified Type.UnionFind as UF
 
-
+import Debug.Trace
 
 -- RUN SOLVER
 
 
 run :: Constraint -> IO (Either (NE.List Error.Error) (Map.Map Name.Name Can.Annotation))
 run constraint =
+  trace "Type.Solve.run: invoked" $
   do  pools <- MVector.replicate 8 []
 
       (State env _ errors) <-

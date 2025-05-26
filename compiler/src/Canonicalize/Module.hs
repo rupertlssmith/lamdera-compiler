@@ -28,7 +28,7 @@ import qualified Reporting.Error.Canonicalize as Error
 import qualified Reporting.Result as Result
 import qualified Reporting.Warning as W
 
-
+import Debug.Trace
 
 -- RESULT
 
@@ -43,6 +43,7 @@ type Result i w a =
 
 canonicalize :: Pkg.Name -> Map.Map ModuleName.Raw I.Interface -> Src.Module -> Result i [W.Warning] Can.Module
 canonicalize pkg ifaces modul@(Src.Module _ exports docs imports values _ _ binops effects) =
+  trace ("Canonicalize.Module.canonicalize: invoked for " ++ show pkg) $
   do  let home = ModuleName.Canonical pkg (Src.getName modul)
       let cbinops = Map.fromList (map canonicalizeBinop binops)
 

@@ -29,7 +29,7 @@ import qualified Elm.ModuleName as ModuleName
 import qualified Elm.String as ES
 import qualified Reporting.Annotation as A
 
-
+import Debug.Trace
 
 -- PATTERN
 
@@ -205,6 +205,7 @@ data Context
 
 check :: Can.Module -> Either (NE.List Error) ()
 check (Can.Module _ _ _ decls _ _ _ _) =
+  trace "Nitpick.PatternMatches.check: invoked" $
   case checkDecls decls [] of
     [] ->
       Right ()
