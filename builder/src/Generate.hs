@@ -38,6 +38,8 @@ import Lamdera ((&))
 import qualified Lamdera
 import qualified Lamdera.AppConfig
 
+import Debug.Trace
+
 -- NOTE: This is used by Make, Repl, and Reactor right now. But it may be
 -- desireable to have Repl and Reactor to keep foreign objects in memory
 -- to make things a bit faster?
@@ -53,6 +55,7 @@ type Task a =
 
 debug :: FilePath -> Details.Details -> Build.Artifacts -> Task B.Builder
 debug root details (Build.Artifacts pkg ifaces roots modules) =
+  trace ("Generate.debug invoked for " ++ show root) $
   do  loading <- loadObjects root details modules
       types   <- loadTypes root ifaces modules
       objects <- finalizeObjects loading
@@ -65,6 +68,7 @@ debug root details (Build.Artifacts pkg ifaces roots modules) =
 
 dev :: FilePath -> Details.Details -> Build.Artifacts -> Task B.Builder
 dev root details (Build.Artifacts pkg _ roots modules) =
+  trace ("Generate.dev invoked for " ++ show root) $
   do  objects <- finalizeObjects =<< loadObjects root details modules
       let mode = Mode.Dev Nothing
       let graph_ = objectsToGlobalGraph objects
@@ -75,6 +79,7 @@ dev root details (Build.Artifacts pkg _ roots modules) =
 
 prod :: FilePath -> Details.Details -> Build.Artifacts -> Task B.Builder
 prod root details (Build.Artifacts pkg _ roots modules) =
+  trace ("Generate.prod invoked for " ++ show root) $
   do  objects <- finalizeObjects =<< loadObjects root details modules
       checkForDebugUses objects
       let graph_ = objectsToGlobalGraph objects

@@ -34,6 +34,8 @@ import qualified Reporting.Render.Type.Localizer as L
 
 import qualified Lamdera.Injection
 
+import Debug.Trace
+
 -- GENERATE
 
 
@@ -44,6 +46,7 @@ type Mains = Map.Map ModuleName.Canonical Opt.Main
 
 generate :: Mode.Mode -> Opt.GlobalGraph -> Mains -> B.Builder
 generate mode (Opt.GlobalGraph graph_ _) mains =
+  trace "Generate.JavaScript.generate invoked" $
   let
     graph = Lamdera.Injection.graphModifications mode mains graph_
     state = Map.foldrWithKey (addMain mode graph) emptyState mains
