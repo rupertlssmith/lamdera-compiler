@@ -27,7 +27,7 @@ import qualified Reporting.Error.Main as E
 import qualified Reporting.Result as Result
 import qualified Reporting.Warning as W
 
-
+import Debug.Trace
 
 -- OPTIMIZE
 
@@ -42,6 +42,7 @@ type Annotations =
 
 optimize :: Annotations -> Can.Module -> Result i [W.Warning] Opt.LocalGraph
 optimize annotations (Can.Module home _ _ decls unions aliases _ effects) =
+  trace "Optimize.Module: invoked" $
   addDecls home annotations decls $
     addEffects home effects $
       addUnions home unions $
