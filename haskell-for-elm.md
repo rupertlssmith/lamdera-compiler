@@ -5,10 +5,10 @@
 |    |>   |   &  | |
 |    <|   |   $  | |
 |    :    |  ::  | |
-|   ::    |  :   | Aaahh!  |
+|   ::    |  :   | Aaaghh!  |
 |  type ... | data ... |
 |  type alias ... | type ... |
-
+|  Debug.log label value     | trace label value | Elm prints label and value, Haskell prints just label. Both take on value for the whole expression. |
 
 Elm:
 
@@ -87,4 +87,3 @@ Haskell:
       e <- taskE
       pure $ func a b c d e
 
-      

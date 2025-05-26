@@ -36,6 +36,9 @@ import Terminal (Parser(..))
 import qualified Lamdera
 import qualified Lamdera.PostCompile
 
+import Debug.Trace
+import Data.Function ((&))
+
 -- FLAGS
 
 
@@ -69,13 +72,14 @@ type Task a = Task.Task Exit.Make a
 
 
 run :: [FilePath] -> Flags -> IO ()
-run paths flags@(Flags _ _ _ report _ noWire optimizeLegible) =
-  do  style <- getStyle report
+run paths flags@(Flags _ _ _ report _ noWire optimizeLegible) =  
+  trace "Make.run: invoked" $
+  do  style <- getStyle report      
       maybeRoot <- Stuff.findRoot
       Lamdera.onlyWhen noWire Lamdera.disableWire
       Lamdera.onlyWhen optimizeLegible Lamdera.enableLongNames
       Reporting.attemptWithStyle style Exit.makeToReport $
-        case maybeRoot of
+        case trace ("Build root is: " ++ show maybeRoot) maybeRoot of
           Just root -> runHelp root paths style flags
           Nothing   -> return $ Left $ Exit.MakeNoOutline
 

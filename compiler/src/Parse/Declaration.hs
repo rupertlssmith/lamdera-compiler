@@ -26,7 +26,6 @@ import qualified Reporting.Annotation as A
 import qualified Reporting.Error.Syntax as E
 
 
-
 -- DECLARATION
 
 

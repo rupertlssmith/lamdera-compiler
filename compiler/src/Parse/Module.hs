@@ -26,13 +26,14 @@ import Parse.Primitives hiding (State, fromByteString)
 import qualified Reporting.Annotation as A
 import qualified Reporting.Error.Syntax as E
 
-
+import Debug.Trace
 
 -- FROM BYTE STRING
 
 
 fromByteString :: ProjectType -> BS.ByteString -> Either E.Error Src.Module
 fromByteString projectType source =
+  trace "Parse.Module.fromByteString: called" $
   case P.fromByteString (chompModule projectType) E.ModuleBadEnd source of
     Right modul -> checkModule projectType modul
     Left err    -> Left (E.ParseError err)

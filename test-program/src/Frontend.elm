@@ -13,6 +13,7 @@ import Url
 type alias Model =
     FrontendModel
 
+
 main : Program {} Model FrontendMsg
 main =
     Browser.application
