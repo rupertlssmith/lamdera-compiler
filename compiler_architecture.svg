@@ -253,6 +253,44 @@
        apply_no_weight="true"
        apply_with_weight="true"
        only_selected="false" />
+    <marker
+       style="overflow:visible"
+       id="Arrow2-84-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow2"
+       markerWidth="7.6999998"
+       markerHeight="5.5999999"
+       viewBox="0 0 7.7 5.6"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="arrow2L-3-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2-84-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow2"
+       markerWidth="7.6999998"
+       markerHeight="5.5999999"
+       viewBox="0 0 7.7 5.6"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.7)"
+         d="M -2,-4 9,0 -2,4 c 2,-2.33 2,-5.66 0,-8 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         id="arrow2L-3-2" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -261,9 +299,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.34630108"
-     inkscape:cx="249.78265"
-     inkscape:cy="1427.9482"
+     inkscape:zoom="1.7458837"
+     inkscape:cx="1136.3873"
+     inkscape:cy="1393.85"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -324,6 +362,17 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="850.17657"
          y="1295.9436">/terminal/src/Make.hs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
+       x="972.40961"
+       y="1319.6106"
+       id="text547-3"><tspan
+         sodipodi:role="line"
+         id="tspan545-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
+         x="972.40961"
+         y="1319.6106">/builder/src/Http.hs lamderaGetArchive</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
@@ -1071,7 +1120,7 @@
     </g>
     <g
        id="g3480"
-       transform="translate(-102.89498,37.112907)">
+       transform="translate(-102.89498,73.854045)">
       <rect
          style="fill:#d0f8d1;fill-opacity:0.759207;stroke:#30c90a;stroke-width:0.734062;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect1084-7-0-8-4-9-8"
@@ -1227,7 +1276,7 @@
     </g>
     <g
        id="g1833-9"
-       transform="translate(-107.98837,2476.2467)">
+       transform="translate(-107.98837,2512.9878)">
       <rect
          style="fill:#f8d0f0;fill-opacity:0.759207;stroke:#c90a80;stroke-width:0.734062;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
          id="rect1084-3-3"
@@ -1302,13 +1351,13 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="914.75702"
-       y="1460.3696"
+       y="1483.0782"
        id="text770"><tspan
          sodipodi:role="line"
          id="tspan768"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="914.75702"
-         y="1460.3696">/compiler/src/Parse/Module.hs fromByteString</tspan></text>
+         y="1483.0782">/compiler/src/Parse/Module.hs fromByteString</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
@@ -1324,79 +1373,123 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="877.69794"
-       y="1323.9982"
+       y="1346.7068"
        id="text919"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="877.69794"
-         y="1323.9982"
+         y="1346.7068"
          id="tspan921">/builder/src/Build.hs fromRoot</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="877.69794"
-       y="1345.4279"
+       y="1368.1365"
        id="text927"><tspan
          sodipodi:role="line"
          id="tspan925"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="877.69794"
-         y="1345.4279">/builder/src/Build.hs fromPaths</tspan></text>
+         y="1368.1365">/builder/src/Build.hs fromPaths</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="897.92444"
-       y="1372.9834"
+       y="1395.692"
        id="text931"><tspan
          sodipodi:role="line"
          id="tspan929"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="897.92444"
-         y="1372.9834">crawlRoot</tspan></text>
+         y="1395.692">crawlRoot</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="897.92444"
-       y="1408.7395"
+       y="1431.4481"
        id="text935"><tspan
          sodipodi:role="line"
          id="tspan933"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="897.92444"
-         y="1408.7395">crawlModule</tspan></text>
+         y="1431.4481">crawlModule</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="897.92444"
-       y="1426.7324"
+       y="1449.441"
        id="text939"><tspan
          sodipodi:role="line"
          id="tspan937"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="897.92444"
-         y="1426.7324">crawlDeps</tspan></text>
+         y="1449.441">crawlDeps</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="897.92444"
-       y="1390.4354"
+       y="1413.144"
        id="text943"><tspan
          sodipodi:role="line"
          id="tspan941"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="897.92444"
-         y="1390.4354">crawlFile</tspan></text>
+         y="1413.144">crawlFile</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="914.75702"
-       y="1698.2153"
+       y="1680.1798"
        id="text947"><tspan
          sodipodi:role="line"
          id="tspan945"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="914.75702"
-         y="1698.2153">/compiler/src/Compile.hs</tspan></text>
+         y="1680.1798">/compiler/src/Compile.hs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
+       x="1054.0371"
+       y="1702.9166"
+       id="text947-3"><tspan
+         sodipodi:role="line"
+         id="tspan945-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
+         x="1054.0371"
+         y="1702.9166">/extra/lamdera/Wire3/Interfaces.hs modifyModul</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
+       x="1054.0371"
+       y="1722.4851"
+       id="text947-0"><tspan
+         sodipodi:role="line"
+         id="tspan945-62"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
+         x="1054.0371"
+         y="1722.4851">/extra/lamdera/Wire3/Core.hs addWireGenerations</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
+       x="1054.0371"
+       y="1741.9141"
+       id="text947-3-6"><tspan
+         sodipodi:role="line"
+         id="tspan945-6-1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
+         x="1054.0371"
+         y="1741.9141">/extra/lamdera/Evergreen/ModifyAST.hs update</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
+       x="1054.0371"
+       y="1761.4825"
+       id="text947-0-8"><tspan
+         sodipodi:role="line"
+         id="tspan945-62-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
+         x="1054.0371"
+         y="1761.4825">/extra/lamdera/Nitpick/DebugLog.hs hasUselessDebugLogs</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
@@ -1543,36 +1636,47 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
+       x="1123.1385"
+       y="2881.6699"
+       id="text3001-6-2"><tspan
+         sodipodi:role="line"
+         id="tspan2999-6-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
+         x="1123.1385"
+         y="2881.6699">longNamesEnabled</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="905.54169"
-       y="2889.7114"
+       y="2928.3188"
        id="text2952-4"><tspan
          sodipodi:role="line"
          id="tspan2950-9"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="905.54169"
-         y="2889.7114">/compiler/src/AST/Optimized.hs addLocalGraph</tspan></text>
+         y="2928.3188">/compiler/src/AST/Optimized.hs addLocalGraph</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="905.54169"
-       y="2916.5227"
+       y="2955.1301"
        id="text2952-5"><tspan
          sodipodi:role="line"
          id="tspan2950-0"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="905.54169"
-         y="2916.5227">/compiler/src/AST/Optimized.hs GlobalGraph</tspan></text>
+         y="2955.1301">/compiler/src/AST/Optimized.hs GlobalGraph</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;stroke-width:0.9375"
        x="905.54169"
-       y="3005.7693"
+       y="3030.208"
        id="text3445"><tspan
          sodipodi:role="line"
          id="tspan3443"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.9375"
          x="905.54169"
-         y="3005.7693">/compiler/src/Generate/JavaScript.hs generate</tspan></text>
+         y="3030.208">/compiler/src/Generate/JavaScript.hs generate</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:2.34375;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-84)"
        d="M 732.85577,977.05327 V 1391.2965"
@@ -1600,12 +1704,12 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:2.34375;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-84)"
-       d="m 732.85577,2840.3232 v 10.8473"
+       d="m 732.85577,2840.3232 0,44.1561"
        id="path4349"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:2.34375;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2-84)"
-       d="m 732.85577,2937.5057 v 81.6445"
+       d="m 732.85577,2974.2468 v 81.6445"
        id="path4351"
        sodipodi:nodetypes="cc" />
     <path
@@ -1658,5 +1762,50 @@
        id="path6317"
        inkscape:path-effect="#path-effect6319"
        inkscape:original-d="m 792.56107,2599.9215 c 9.09452,29.9253 18.1881,59.8496 27.28075,89.773 -13.20025,20.8087 -26.40091,41.6156 -39.60277,62.4221" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2-84)"
+       d="m 1039.8497,1291.1582 h 100.6116"
+       id="path787" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;word-spacing:0px;stroke-width:0.09375;fill:#28d35d;fill-opacity:1;stroke:#55a004;stroke-opacity:1;stroke-dasharray:none"
+       x="1063.8311"
+       y="1288.1272"
+       id="text1459"><tspan
+         sodipodi:role="line"
+         id="tspan1457"
+         style="stroke-width:0.09375;fill:#28d35d;fill-opacity:1;stroke:#55a004;stroke-opacity:1;stroke-dasharray:none"
+         x="1063.8311"
+         y="1288.1272">alternative</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2-84-7)"
+       d="m 1004.1158,2877.2924 h 100.6116"
+       id="path787-3" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;word-spacing:0px;fill:#28d35d;fill-opacity:1;stroke:#55a004;stroke-width:0.09375;stroke-dasharray:none;stroke-opacity:1"
+       x="1028.0972"
+       y="2874.2612"
+       id="text1459-5"><tspan
+         sodipodi:role="line"
+         id="tspan1457-6"
+         style="fill:#28d35d;fill-opacity:1;stroke:#55a004;stroke-width:0.09375;stroke-dasharray:none;stroke-opacity:1"
+         x="1028.0972"
+         y="2874.2612">alternative</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9375px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2-84-1)"
+       d="M 934.64353,1698.5729 H 1035.2551"
+       id="path787-7" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';letter-spacing:0px;word-spacing:0px;fill:#28d35d;fill-opacity:1;stroke:#55a004;stroke-width:0.09375;stroke-dasharray:none;stroke-opacity:1"
+       x="958.62488"
+       y="1695.5417"
+       id="text1459-0"><tspan
+         sodipodi:role="line"
+         id="tspan1457-9"
+         style="fill:#28d35d;fill-opacity:1;stroke:#55a004;stroke-width:0.09375;stroke-dasharray:none;stroke-opacity:1"
+         x="958.62488"
+         y="1695.5417">alternative</tspan></text>
   </g>
 </svg>
