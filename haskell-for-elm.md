@@ -1,13 +1,13 @@
-|   Elm   | Haskel |
-| ------- | ------ |
+|   Elm   | Haskel | |
+| ------- | ------ |-|
 |    >>   |   Control.Arrow.>>> | |
 |    <<   |   .  | Hmmm... |
 |    |>   |   &  | |
 |    <|   |   $  | |
 |    :    |  ::  | |
 |   ::    |  :   | Aaaghh!  |
-|  type ... | data ... |
-|  type alias ... | type ... |
+|  type ... | data ... | |
+|  type alias ... | type ... | |
 |  Debug.log label value     | trace label value | Elm prints label and value, Haskell prints just label. Both take on value for the whole expression. |
 
 Elm:
