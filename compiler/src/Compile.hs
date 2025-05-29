@@ -39,7 +39,6 @@ import qualified Lamdera.UiSourceMap
 import qualified Lamdera.Nitpick.DebugLog
 import qualified Lamdera.Evergreen.ModifyAST
 
-import Debug.Trace
 -- import StandaloneInstances
 
 -- COMPILE
@@ -56,8 +55,7 @@ data Artifacts =
 {- The original compile function for reference -}
 compile :: Pkg.Name -> Map.Map ModuleName.Raw I.Interface -> Src.Module -> Either E.Error Artifacts
 compile pkg ifaces modul =
-  -- Lamdera.alternativeImplementationWhen (trace "Lamdera.isWireEnabled_" Lamdera.isWireEnabled_) (compile_ pkg ifaces modul) $
-  Lamdera.alternativeImplementationWhen (debugTrace "Lamdera.isWireEnabled_" Lamdera.isWireEnabled_) (compile_ pkg ifaces modul) $
+  Lamdera.alternativeImplementationWhen Lamdera.isWireEnabled_ (compile_ pkg ifaces modul) $
   do  canonical   <- canonicalize pkg ifaces modul
       annotations <- typeCheck modul canonical
       ()          <- nitpick canonical
