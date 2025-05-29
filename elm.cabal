@@ -33,7 +33,7 @@ Flag dev {
 }
 
 
-Executable lamdera
+Executable exc-opt
     if flag(dev)
         ghc-options: -O0 -Wall -Werror
     else

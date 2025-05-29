@@ -5,7 +5,7 @@ source "common.sh"
 os="linux"
 arch="x86_64"
 
-buildTag="lamdera-$version-$os-$arch"
+buildTag="ext-opt-$version-$os-$arch"
 dist=distribution/dist
 mkdir -p $dist
 bin=$dist/$buildTag
@@ -23,7 +23,7 @@ mkdir -p distribution/dist                                # Ensure the dist dire
 
 
 bin=distribution/dist/$buildTag                           # Copy built binary to dist
-docker run --rm --entrypoint cat $buildTag /lamdera/lamdera > $bin
+docker run --rm --entrypoint cat $buildTag /exc-opt/exc-opt > $bin
 chmod a+x $bin
 file $bin
 ls -alh $bin
