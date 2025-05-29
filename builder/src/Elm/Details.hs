@@ -779,7 +779,7 @@ downloadPackage cache manager pkg vsn =
   in
   do  eitherByteString <-
         Http.get manager url [] id (return . Right)
-          & Lamdera.alternativeImplementationPassthrough (Lamdera.Extensions.endpointJsonOverride pkg vsn)
+          -- & Lamdera.alternativeImplementationPassthrough (Lamdera.Extensions.endpointJsonOverride pkg vsn)
 
       pkgsPath <- Lamdera.getLamderaPkgPath -- @LAMDERA
 

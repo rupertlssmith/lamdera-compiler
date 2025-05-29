@@ -438,7 +438,7 @@ disableWire = do
 {-# NOINLINE isWireEnabled #-}
 isWireEnabled :: IO Bool
 isWireEnabled = do
-  readMVar useWire_
+  pure False
 
 {-# NOINLINE isWireEnabled_ #-}
 isWireEnabled_ :: Bool

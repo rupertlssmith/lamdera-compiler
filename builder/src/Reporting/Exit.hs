@@ -870,7 +870,7 @@ installToReport exit =
       toSolverReport solver
 
     InstallUnknownPackageOnline pkg suggestions ->
-      alternativeImplementationWhen (pkg == Pkg.lamderaCore || pkg == Pkg.lamderaCodecs) (Lamdera.Error.corruptCaches Help.docReport) $
+      -- alternativeImplementationWhen (pkg == Pkg.lamderaCore || pkg == Pkg.lamderaCodecs) (Lamdera.Error.corruptCaches Help.docReport) $
       Help.docReport "UNKNOWN PACKAGE" Nothing
         (
           D.fillSep
@@ -884,7 +884,7 @@ installToReport exit =
         ]
 
     InstallUnknownPackageOffline pkg suggestions ->
-      alternativeImplementationWhen (pkg == Pkg.lamderaCore || pkg == Pkg.lamderaCodecs) (Lamdera.Error.corruptCachesOffline Help.docReport) $
+      -- alternativeImplementationWhen (pkg == Pkg.lamderaCore || pkg == Pkg.lamderaCodecs) (Lamdera.Error.corruptCachesOffline Help.docReport) $
       Help.docReport "UNKNOWN PACKAGE" Nothing
         (
           D.fillSep

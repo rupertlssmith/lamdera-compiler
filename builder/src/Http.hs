@@ -179,7 +179,7 @@ getArchive
   -> ((Sha, Zip.Archive) -> IO (Either e a))
   -> IO (Either e a)
 getArchive manager url onError err onSuccess =
-  Lamdera.alternativeImplementation (lamderaGetArchive manager url onError err onSuccess) $
+  --Lamdera.alternativeImplementation (lamderaGetArchive manager url onError err onSuccess) $
   handle (handleSomeException url onError) $
   handle (handleHttpException url onError) $
   do  req0 <- parseUrlThrow url

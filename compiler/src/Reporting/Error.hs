@@ -185,7 +185,7 @@ reportToDoc relativePath report@(Report.Report title _ _ message) =
     , message
     , ""
     ]
-    & Lamdera.alternativeImplementationPassthrough (Lamdera.Error.reportToDoc relativePath report)
+    -- & Lamdera.alternativeImplementationPassthrough (Lamdera.Error.reportToDoc relativePath report)
 
 
 toMessageBar :: String -> FilePath -> D.Doc

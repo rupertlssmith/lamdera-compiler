@@ -55,7 +55,7 @@ data Artifacts =
 {- The original compile function for reference -}
 compile :: Pkg.Name -> Map.Map ModuleName.Raw I.Interface -> Src.Module -> Either E.Error Artifacts
 compile pkg ifaces modul =
-  Lamdera.alternativeImplementationWhen Lamdera.isWireEnabled_ (compile_ pkg ifaces modul) $
+  --Lamdera.alternativeImplementationWhen Lamdera.isWireEnabled_ (compile_ pkg ifaces modul) $
   do  canonical   <- canonicalize pkg ifaces modul
       annotations <- typeCheck modul canonical
       ()          <- nitpick canonical
