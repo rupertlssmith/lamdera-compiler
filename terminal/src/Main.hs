@@ -36,18 +36,18 @@ main :: IO ()
 main =
   Terminal.app intro outro
     -- @LAMDERA additions + removals
-    [ Lamdera.CLI.live
-    , Lamdera.CLI.login
-    , Lamdera.CLI.check
-    , Lamdera.CLI.deploy
-    , init
-    , install
-    , make
-    , repl
-    , Lamdera.CLI.reset
-    , Lamdera.CLI.update
-    , Lamdera.CLI.annotate
-    , Lamdera.CLI.eval
+    [ --Lamdera.CLI.live
+    --, Lamdera.CLI.login
+    --, Lamdera.CLI.check
+    --, Lamdera.CLI.deploy
+    --, init
+    --, install
+    make
+    --, repl
+    --, Lamdera.CLI.reset
+    --, Lamdera.CLI.update
+    --, Lamdera.CLI.annotate
+    --, Lamdera.CLI.eval
     -- , reactor
     -- , bump
     -- , diff
@@ -60,7 +60,7 @@ intro =
   P.vcat
     [ P.fillSep
         ["Hi,","thank","you","for","trying","out"
-        ,P.green "Lamdera"
+        ,P.green "Elm Experimental Compiler Opt"
         ,P.green (P.text Lamdera.Version.short)
         ,"on"
         ,P.green "Elm"
@@ -69,8 +69,8 @@ intro =
         ]
     , ""
     , P.black "-------------------------------------------------------------------------------"
-    , P.black "I highly recommend working through <https://guide.elm-lang.org> to get started."
-    , P.black "It teaches many important concepts, including how to use `elm` in the terminal."
+    , P.black "This is an experimental compiler for Elm for testing new compiler features."
+    , P.black "It is strongly recommended that you do not use this in production."
     , P.black "-------------------------------------------------------------------------------"
     ]
 
@@ -190,6 +190,9 @@ port_ =
 make :: Terminal.Command
 make =
   let
+    summary =
+      "Compile and Elm application or package."
+
     details =
       "The `make` command compiles Elm code into JS or HTML:"
 
@@ -197,7 +200,7 @@ make =
       stack
         [ reflow
             "For example:"
-        , P.indent 4 $ P.green "lamdera make src/Main.elm"
+        , P.indent 4 $ P.green "exc-opt make src/Main.elm"
         , reflow
             "This tries to compile an Elm file named src/Main.elm, generating an index.html\
             \ file if possible."
@@ -213,7 +216,7 @@ make =
         |-- onOff "no-wire" "Explicitly disable Lamdera's wire codegen."
         |-- onOff "optimize-legible" "Same as --optimize but without identifier shortening, handy for debugging optimised code or for when identifiers are more useful than smaller JS compilations."
   in
-  Terminal.Command "make" Uncommon details example (zeroOrMore elmFile) makeFlags Make.run
+  Terminal.Command "make" (Common summary) details example (zeroOrMore elmFile) makeFlags Make.run
 
 
 
