@@ -20,7 +20,7 @@ import qualified Develop
 import qualified Diff
 import qualified Init
 import qualified Install
-import qualified Make
+import qualified Ext.Make as Make
 import qualified Publish
 import qualified Repl
 

@@ -32,7 +32,7 @@ import qualified Nitpick.Debug as Nitpick
 import qualified Reporting.Exit as Exit
 import qualified Reporting.Task as Task
 import qualified Stuff
-
+import qualified Ext.Generate.JavaScript as JSExt
 
 import Lamdera ((&))
 import qualified Lamdera
@@ -60,7 +60,8 @@ debug root details (Build.Artifacts pkg ifaces roots modules) =
       let graph_ = objectsToGlobalGraph objects
       graph <- Task.io $ Lamdera.AppConfig.injectConfig graph_
       let mains = gatherMains pkg objects roots
-      return $ JS.generate mode graph mains
+      return $ Lamdera.alternativeImplementation (JSExt.generate mode graph mains) $
+        JS.generate mode graph mains
 
 
 dev :: FilePath -> Details.Details -> Build.Artifacts -> Task B.Builder
@@ -70,7 +71,8 @@ dev root details (Build.Artifacts pkg _ roots modules) =
       let graph_ = objectsToGlobalGraph objects
       graph <- Task.io $ Lamdera.AppConfig.injectConfig graph_
       let mains = gatherMains pkg objects roots
-      return $ JS.generate mode graph mains
+      return $ Lamdera.alternativeImplementation (JSExt.generate mode graph mains) $
+        JS.generate mode graph mains
 
 
 prod :: FilePath -> Details.Details -> Build.Artifacts -> Task B.Builder
@@ -84,7 +86,8 @@ prod root details (Build.Artifacts pkg _ roots modules) =
                    & Lamdera.alternativeImplementationWhen longNamesEnabled
                        (Mode.Prod (Mode.legibleFieldNames graph))
       let mains = gatherMains pkg objects roots
-      return $ JS.generate mode graph mains
+      return $ Lamdera.alternativeImplementation (JSExt.generate mode graph mains) $
+        JS.generate mode graph mains
 
 
 repl :: FilePath -> Details.Details -> Bool -> Build.ReplArtifacts -> N.Name -> Task B.Builder
@@ -92,7 +95,8 @@ repl root details ansi (Build.ReplArtifacts home modules localizer annotations) 
   do  objects <- finalizeObjects =<< loadObjects root details modules
       let graph_ = objectsToGlobalGraph objects
       graph <- Task.io $ Lamdera.AppConfig.injectConfig graph_
-      return $ JS.generateForRepl ansi localizer graph home name (annotations ! name)
+      return $ Lamdera.alternativeImplementation (JSExt.generateForRepl ansi localizer graph home name (annotations ! name)) $
+        JS.generateForRepl ansi localizer graph home name (annotations ! name)
 
 
 
