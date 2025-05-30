@@ -71,6 +71,7 @@ Executable exc-opt
         ext-common
         ext-sentry
         ext-elm-pages
+        ext-opt
 
     Main-Is:
         Main.hs
@@ -344,6 +345,9 @@ Executable exc-opt
         -- ext-elm-pages
         Ext.ElmPages
         Test.Ext.ElmPages.Check
+
+        -- exc-opt experimental
+        Ext.Generate.JavaScript
 
     Build-depends:
         ansi-terminal,
