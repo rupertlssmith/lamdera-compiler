@@ -420,8 +420,8 @@ generateCall mode argLookup func args =
       generateCoreCall mode argLookup global args
 
     -- @LAMDERA
-    -- Opt.VarGlobal (Opt.Global home name) ->
-    --   generateGlobalCall home name argLookup (map (generateJsExpr mode argLookup) args)
+    Opt.VarGlobal (Opt.Global home name) ->
+      generateGlobalCall home name argLookup (map (generateJsExpr mode argLookup) args)
 
     Opt.VarBox _ ->
       case mode of
@@ -450,11 +450,11 @@ generateCallHelp mode argLookup func args =
 generateGlobalCall :: ModuleName.Canonical -> Name.Name -> FnArgLookup -> [JS.Expr] -> JS.Expr
 generateGlobalCall home name argLookup args =
   -- @LAMDERA
-  -- case argLookup home name of
-  --   Just n
-  --     | n > 1 && n == length args ->
-  --         JS.Call (JS.Ref (JsName.fromGlobalDirectFn home name)) args
-  --   _ -> 
+  case argLookup home name of
+    Just n
+      | n > 1 && n == length args ->
+          JS.Call (JS.Ref (JsName.fromGlobalDirectFn home name)) args
+    _ -> 
       -- Original:
       generateNormalCall (JS.Ref (JsName.fromGlobal home name)) args
 

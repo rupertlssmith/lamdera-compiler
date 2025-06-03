@@ -195,11 +195,11 @@ addGlobalHelp mode graph global state =
   in
   case graph ! global of
     -- @LAMDERA
-    -- Opt.Define (Opt.Function args body) deps
-    --   | length args > 1 ->
-    --       addStmt
-    --         (addDeps deps state)
-    --         (fn global args (Expr.generateFunctionImplementation mode argLookup args body))
+    Opt.Define (Opt.Function args body) deps
+      | length args > 1 ->
+          addStmt
+            (addDeps deps state)
+            (fn global args (Expr.generateFunctionImplementation mode argLookup args body))
 
     Opt.Define expr deps ->
       addStmt (addDeps deps state) (
@@ -213,11 +213,11 @@ addGlobalHelp mode graph global state =
       )
 
     -- @LAMDERA
-    -- Opt.Ctor index arity
-    --   | arity > 1 ->
-    --       addStmt
-    --         state
-    --         (ctor global arity (Expr.generateCtorImplementation mode global index arity))
+    Opt.Ctor index arity
+      | arity > 1 ->
+          addStmt
+            state
+            (ctor global arity (Expr.generateCtorImplementation mode global index arity))
 
     Opt.Ctor index arity ->
       addStmt state (
@@ -319,9 +319,9 @@ generateCycleFunc :: Mode.Mode -> FnArgLookup -> ModuleName.Canonical -> Opt.Def
 generateCycleFunc mode argLookup home def =
   case def of
     -- @LAMDERA
-    -- Opt.Def name (Opt.Function args body)
-    --   | length args > 1 ->
-    --       fn (Opt.Global home name) args (Expr.generateFunctionImplementation mode argLookup args body)
+    Opt.Def name (Opt.Function args body)
+      | length args > 1 ->
+          fn (Opt.Global home name) args (Expr.generateFunctionImplementation mode argLookup args body)
     
     Opt.Def name expr ->
       JS.Var (JsName.fromGlobal home name) (Expr.codeToExpr (Expr.generate mode argLookup expr))
